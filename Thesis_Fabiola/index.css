@@ -31,6 +31,7 @@ body {
 p {
   font-family: 'Merriweather-Regular'
   font-size: 14px;
+  /* text-align: left; */
   overflow-wrap: break-word;
     word-wrap: break-word;
     -webkit-hyphens: auto;
@@ -66,6 +67,64 @@ h1 {
   text-indent: 20px;
   color: #5658eb;
 }
+
+h2 {
+  font-family: 'Merriweather-Regular';
+  font-weight: normal;
+  font-size: 26px;
+  text-align: center;
+  color: #5658eb;
+}
+
+span{
+  font-family: 'helvetica';
+  font-size: 40px;
+  text-indent: 18px;
+  text-align: left;
+  color: #5658eb;
+}
+
+.menu {
+	position: fixed;
+	top: 5%;
+  text-align: left;
+	left: 2%;
+	width: 60px;
+	margin: 0;
+	z-index: 2;
+}
+
+.link {
+	position: relative;
+	width: 100%;
+	line-height: 0.5;
+	margin-top: 75px;
+	margin-bottom: 225px;
+	text-align: left;
+	z-index: 50%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	line-height: 1.2;
+	color: #5658eb;
+}
+
+.chapter {
+	position: relative;
+	width: 50%;
+	height: auto;
+	left: 25%;
+   	margin-top: -30px;
+  	padding-top: 30px;
+  	margin-bottom: 100px;
+}
+
+.Bigtitle{
+  font-family: 'Merriweather-Regular';
+  font-size: 50px;
+  text-align: left;
+  color: #5658eb;
+}
+
 .Title{
   font-family: 'Merriweather-Regular';
   font-size: 26px;
