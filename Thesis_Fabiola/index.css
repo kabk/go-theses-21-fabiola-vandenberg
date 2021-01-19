@@ -1,5 +1,5 @@
 body {
-  background-color: black;
+  background-color: white;
 }
 
 /* FONTS */
@@ -49,7 +49,7 @@ p {
 
 
 p2 {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'BWHaasText-Medium', sans-serif;
   font-size: 18px;
   overflow-wrap: break-word;
     word-wrap: break-word;
@@ -221,7 +221,7 @@ span{
   border-radius: 40px;
   padding: 24px;
   text-align: left;
-  color: black;
+  color: white;
 }
 
 .bubble-bottom-left:before {

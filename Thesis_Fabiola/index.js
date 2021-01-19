@@ -1,83 +1,41 @@
-document.addEventListener('DOMContentLoaded', function(event) {
-  function typeWriter(text, i, fnCallback) {
-    if (i < text.length) {
-      document.querySelector("#My2yearrelationship").innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+// Deze functie geeft een stukje code terug waar we zeggen wacht voor zoveel milliseconde
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-      setTimeout(function() {
-        typeWriter(text, i + 1, fnCallback)
-      }, 150);
-    } else {
-      setTimeout(fnCallback, 700);
-    }
+// De functie om te "typen"
+async function typeWriter(text, el) {
+  // Voor de lengte van de tekst gaan we typen
+  for (let i = 0; i < text.length; i++) {
+    // Wacht 150 milliseconde
+    await timeout(150);
+    // In het element zet de tekst vanaf het begin tot en met I + 1
+    el.innerHTML = text.substring(0, i + 1)
   }
+}
 
-  function Title(i) {
+// Check of dit element nu op je scherm staat
+function isInViewport (elem) {
+  const bounding = elem.getBoundingClientRect();
+  return (
+    bounding.top >= 0 &&
+    bounding.left >= 0 &&
+    bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+};
 
-    var dataText = ["My 2 year relationship", "My 2 year relationship" ];
+function addTyperToScrollEvent(text, elementId) {
+  const titleElement = document.querySelector(elementId);
 
-
-    if (i < dataText[i].length) {
-      typeWriter(dataText[i], 0, function() {
-        Title(i + 1);
-      });
+  window.addEventListener("scroll", async function (event) {
+    if (isInViewport(titleElement)) {
+      await typeWriter(text, titleElement);
     }
-  }
+  }, false);
+}
 
-  Title(0);
-})
-
-// function typeWriter(text, i, el, fnCallback) {
-//     if (i < text.length) {
-//       el.innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
-//
-//       setTimeout(function() {
-//         typeWriter(text, i + 1, fnCallback)
-//       }, 150);
-//     } else {
-//       setTimeout(fnCallback, 700);
-//     }
-//   }
-//
-//   function Title(i, el) {
-//
-//     var dataText = ["My 2 year relationship", "My 2 year relationship" ];
-//
-//
-//     if (i < dataText[i].length) {
-//       typeWriter(dataText[i], 0, el, function() {
-//         Title(i + 1);
-//       });
-//     },
-//   }
-//
-//
-//
-//
-//     if (i < dataText[i].length) {
-//       typeWriter(dataText[i], 0, function() {
-//         Title(i + 1);
-//       });
-//     }
-//   }
-//
-//
-//
-//
-// var isInViewport = function (elem) {
-//     var bounding = elem.getBoundingClientRect();
-//     return (
-//         bounding.top >= 0 &&
-//         bounding.left >= 0 &&
-//         bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// };
-//
-// var header = document.querySelector("#My2yearrelationship");
-//
-//
-// window.addEventListener('scroll', function (event) {
-// 	if (isInViewport(header)) {
-//     Title(0, document.querySelector("#My2yearrelationship"));
-// 	}
-// }, false);
+addTyperToScrollEvent("Love letters left on read", "#Lovelettersleftonread")
+addTyperToScrollEvent("My 2 year relationship", "#My2yearrelationship")
+addTyperToScrollEvent("Abstract", "#Abstract")
+addTyperToScrollEvent("Introduction", "#Introduction")
