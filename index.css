@@ -3,24 +3,22 @@ body {
 }
 
 /* FONTS */
-@font-face {
-    font-family:'Merriweather-Regular';
-    src: url(fonts/Merriweather-Regular.ttf);
-}
-@font-face {
-    font-family:'Merriweather-bold';
-    src: url(fonts/Merriweather-Bold.ttf);
-}
-
-@font-face {
-    font-family:'Merriweather-Italic';
-    src: url(fonts/Merriweather-Italic.ttf);
-}
 
 @font-face {
     font-family:'BWHaasText-Medium';
     src: url(fonts/BWHaasText-65Medium.otf);
 }
+
+@font-face {
+    font-family:'BWHaasText-Roman';
+    src: url(fonts/BWHaasText-55Roman.otf);
+}
+
+@font-face {
+    font-family:'BWHaasText-Italic';
+    src: url(fonts/BWHaasText-56Italic.otf);
+}
+
 
 * {
   margin: 0;
@@ -74,7 +72,7 @@ h1 {
 }
 
 h2 {
-  font-family: 'Merriweather-bold';
+  font-family: 'BWHaasText-Roman';
   font-weight: normal;
   font-size: 26px;
   text-align: center;
@@ -82,7 +80,7 @@ h2 {
 }
 
 span{
-  font-family: 'helvetica';
+  font-family: 'BWHaasText-Medium';
   font-size: 40px;
   text-indent: 18px;
   text-align: left;
@@ -122,15 +120,9 @@ span{
   	margin-bottom: 100px;
 }
 
-.Bigtitle{
-  font-family: 'Merriweather-bold';
-  font-size: 50px;
-  text-align: left;
-  color: #ff0039;
-}
 
 .Title{
-  font-family: 'Merriweather-bold';
+  font-family: 'BWHaasText-Medium';
   font-size: 26px;
   text-align: center;
   color: #ff0039;
@@ -144,14 +136,14 @@ span{
 }
 
 .italic {
-  font-family: 'Merriweather-Italic';
+  font-family: 'BWHaasText-Roman';
   font-size: 14px;
   text-align: center;
   color: #ff0039;
 }
 
 .footnotes{
-  font-family: 'BWHaasText-Medium';
+  font-family: 'BWHaasText-Roman';
   font-size: 10px;
   padding-top: 3px;
   padding-left: 32px;
@@ -168,12 +160,12 @@ span{
 
 
 .image-footnotes {
-  font-family: 'BWHaasText-Medium';
+  font-family: 'BWHaasText-Roman';
   font-size: 12px;
   padding-top: 3px;
   padding-left: 18px;
   padding-right: 18px;
-  color: #ff0039;
+  color: black;
   overflow-wrap: break-word;
     word-wrap: break-word;
     -webkit-hyphens: auto;
@@ -192,7 +184,8 @@ span{
 .images img{
   width: 100%;
   display: block;
-  padding-bottom: 8px;
+  border-radius: 25px;
+  padding-bottom: 4px;
 }
 
 /* .bubble {
@@ -208,7 +201,7 @@ span{
 } */
 
 .bubble {
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'BWHaasText-Medium', sans-serif;
   font-size: 16px;
   overflow-wrap: break-word;
     word-wrap: break-word;
