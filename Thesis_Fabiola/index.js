@@ -1,20 +1,24 @@
+
 // Deze functie geeft een stukje code terug waar we zeggen wacht voor zoveel milliseconde
 function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // De functie om te "typen"
+// Voor de lengte van de tekst gaan we typen
+
+let elementsRunning = {};
 async function typeWriter(text, el) {
-  // Voor de lengte van de tekst gaan we typen
-  for (let i = 0; i < text.length; i++) {
-    // Wacht 150 milliseconde
-    await timeout(150);
-    // In het element zet de tekst vanaf het begin tot en met I + 1
-    el.innerHTML = text.substring(0, i + 1)
-  }
+  if (!elementsRunning[el.id]) {
+    elementsRunning[el.id] = true;
+    for (let i = 0; i < text.length; i++) {
+      await timeout(150);
+      el.innerHTML = text.substring(0, i + 1)
+    }
+  };
+
 }
 
-// Check of dit element nu op je scherm staat
 function isInViewport (elem) {
   const bounding = elem.getBoundingClientRect();
   return (
@@ -25,8 +29,10 @@ function isInViewport (elem) {
   );
 };
 
+
 function addTyperToScrollEvent(text, elementId) {
   const titleElement = document.querySelector(elementId);
+  elementsRunning[titleElement.id] = false;
 
   window.addEventListener("scroll", async function (event) {
     if (isInViewport(titleElement)) {
@@ -39,3 +45,5 @@ addTyperToScrollEvent("Love letters left on read", "#Lovelettersleftonread")
 addTyperToScrollEvent("My 2 year relationship", "#My2yearrelationship")
 addTyperToScrollEvent("Abstract", "#Abstract")
 addTyperToScrollEvent("Introduction", "#Introduction")
+addTyperToScrollEvent("Chapter I", "#Chapter1")
+addTyperToScrollEvent("Waiting in line for the new iPhone", "#Waiting")
