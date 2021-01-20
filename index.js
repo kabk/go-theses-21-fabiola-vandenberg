@@ -40,7 +40,7 @@ function addTyperToScrollEvent(text, elementId) {
   }, false);
 }
 
-addTyperToScrollEvent("Love letters left on read <br> My 2 year relationship", "#Lovelettersleftonread")
+addTyperToScrollEvent("Love letters left on read <br><br> My 2 year relationship", "#Lovelettersleftonread")
 addTyperToScrollEvent("read 5:15 am", "#read")
 addTyperToScrollEvent("Abstract", "#abstract")
 addTyperToScrollEvent("Introduction", "#introduction")
