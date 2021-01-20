@@ -80,6 +80,14 @@ span{
   color: #ff0039;
 }
 
+.Landingpage{
+  font-family: 'BWHaasText-Medium';
+  font-size: 60px;
+  text-indent: 18px;
+  text-align: left;
+  color: #ff0039;
+}
+
 .menu {
 	position: fixed;
 	top: 5%;
