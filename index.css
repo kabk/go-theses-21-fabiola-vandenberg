@@ -114,6 +114,14 @@ a:hover {
   color: #ff0039;
 }
 
+.read{
+  font-family: 'BWHaasText-Medium';
+  font-size: 20px;
+  text-align: right;
+  color: #ff0039;
+}
+
+
 .menu {
 	position: sticky;
 	top: 5%;
@@ -161,6 +169,7 @@ a:hover {
   text-align: center;
   color: #ff0039;
 }
+
 
 .footnotes{
   font-family: 'BWHaasText-Roman';

@@ -41,11 +41,12 @@ function addTyperToScrollEvent(text, elementId) {
 }
 
 addTyperToScrollEvent("Love letters left on read <br> My 2 year relationship", "#Lovelettersleftonread")
+addTyperToScrollEvent("read 5:15 am", "#read")
 addTyperToScrollEvent("Abstract", "#abstract")
 addTyperToScrollEvent("Introduction", "#introduction")
 addTyperToScrollEvent("Chapter I<br>Waiting in line for the new iPhone", "#chapter1")
 addTyperToScrollEvent("Chapter II<br>Good morning Siri", "#chapter2")
-addTyperToScrollEvent("Chapter III<br>Digital butterflies", "#chapter3")
+addTyperToScrollEvent("Chapter III<br>Digital butterflies","#chapter3")
 addTyperToScrollEvent("Chapter IV<br>No, you hang up", "#chapter4")
 addTyperToScrollEvent("Conclusion<br>Broken heart emoji", "#conclusion")
 addTyperToScrollEvent("Bibliography", "#bibliography")
