@@ -44,25 +44,6 @@ p {
     hyphenate-limit-chars: 9 3 3;
 }
 
-
-
-p2 {
-  font-family: 'BWHaasText-Medium', sans-serif;
-  font-size: 18px;
-  overflow-wrap: break-word;
-    word-wrap: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-    color: #ff0039;
-    hyphenate-limit-chars: 9 3 3;
-}
-
-sup {
-    vertical-align: super;
-    font-size: smaller;
-}
-
 h1 {
   font-family: 'BWHaasText-Medium', sans-serif;
   font-weight: 400;
@@ -71,25 +52,70 @@ h1 {
   color: #ff0039;
 }
 
+h2 {
+  font-family: 'BWHaasText-Medium', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-indent: 20px;
+  color: #ff0039;
+}
 
-span{
+
+a{
+  font-family: 'BWHaasText-Medium', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-indent: 20px;
+  color: #ff0039;
+}
+
+
+a.link {
+  color: #ff0039;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ff0039;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: #ff0039;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ff0039;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+}
+
+
+/* span{
   font-family: 'BWHaasText-Medium';
   font-size: 40px;
   text-indent: 18px;
   text-align: left;
   color: #ff0039;
-}
+} */
 
-.Landingpage{
+.Title{
   font-family: 'BWHaasText-Medium';
-  font-size: 60px;
-  text-indent: 18px;
+  font-size: 55px;
   text-align: left;
   color: #ff0039;
 }
 
 .menu {
-	position: fixed;
+	position: sticky;
 	top: 5%;
   text-align: left;
 	left: 2%;
@@ -121,17 +147,10 @@ span{
   	margin-bottom: 100px;
 }
 
-
-.Title{
-  font-family: 'BWHaasText-Medium';
-  font-size: 26px;
-  text-align: center;
-  color: #ff0039;
-}
-
 .subtitle {
   font-family: 'BWHaasText-Medium';
   font-size: 14px;
+  text-transform: uppercase;
   text-indent: 18px;
   color: #ff0039;
 }
@@ -147,8 +166,8 @@ span{
   font-family: 'BWHaasText-Roman';
   font-size: 10px;
   padding-top: 3px;
-  padding-left: 32px;
-  padding-right: 18px;
+  padding-left: 5%;
+  padding-right: 5%;
   color: #ff0039;
   overflow-wrap: break-word;
     word-wrap: break-word;
@@ -157,8 +176,6 @@ span{
     hyphens: auto;
     hyphenate-limit-chars: 9 3 3;
 }
-
-
 
 .image-footnotes {
   font-family: 'BWHaasText-Roman';

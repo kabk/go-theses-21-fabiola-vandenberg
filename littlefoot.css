@@ -1,7 +1,7 @@
 .littlefoot-footnote__button {
     -webkit-font-smoothing: antialiased;
     backface-visibility: hidden;
-    background-color: rgba(110, 110, 110, 0.2);
+    background-color: #ff0039;
     border-radius: .5em;
     border: 0;
     box-sizing: border-box;
@@ -27,17 +27,17 @@
 
 .littlefoot-footnote__button:hover,
 .littlefoot-footnote__button:focus {
-    background-color: rgba(110, 110, 110, 0.5);
+    background-color: #ff0039;
     color: white
 }
 
 .littlefoot-footnote__button:active {
-    background-color: rgba(110, 110, 110, 0.5);
+    background-color: #ff0039;
     color: white
 }
 
 .littlefoot-footnote__button.is-active {
-    background-color: #6e6e6e;
+    background-color: #ff0039;
     color: white;
     transition-delay: .1s
 }
@@ -132,7 +132,6 @@
     opacity: .97;
     transform: scale(1) translateZ(0)
 }
-
 
 .littlefoot-footnote.is-scrollable .littlefoot-footnote__wrapper::before,
 .littlefoot-footnote.is-scrollable .littlefoot-footnote__wrapper::after {
