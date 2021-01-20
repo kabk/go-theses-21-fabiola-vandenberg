@@ -71,13 +71,6 @@ h1 {
   color: #ff0039;
 }
 
-h2 {
-  font-family: 'BWHaasText-Roman';
-  font-weight: normal;
-  font-size: 26px;
-  text-align: center;
-  color: #ff0039;
-}
 
 span{
   font-family: 'BWHaasText-Medium';
@@ -188,17 +181,6 @@ span{
   padding-bottom: 4px;
 }
 
-/* .bubble {
-  padding-top: 25px;
-  padding-bottom: 25px;
-  z-index: 1;
-}
-
-.bubble img{
-  position: absolute;
-  width: 95%;
-  padding-bottom: 8px;
-} */
 
 .bubble {
   font-family: 'BWHaasText-Medium', sans-serif;
