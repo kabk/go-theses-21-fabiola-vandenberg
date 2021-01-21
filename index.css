@@ -118,15 +118,24 @@ a:hover {
 .FirstTitle{
   font-family: 'BWHaasText-Medium';
   font-size: 55px;
-  padding-top: 100px;
-  text-align: left;
-  color: #ff0039;
+  padding-top: 120px;
+  padding-left: -30px;
+  padding-right: 20px;
+  height: 500px;
+  color:#ff0039;
+  background-color: white;
+  text-align:left;
+  vertical-align:middle;
+  justify-content: space-around;
+  /* justify-content:center; */
+  align-items: center;
 }
+
 
 .read{
   font-family: 'BWHaasText-Medium';
   font-size: 20px;
-  padding-top: 520px;
+  padding-top: 50px;
   text-align: right;
   color: #ff0039;
 }
@@ -148,6 +157,7 @@ a:hover {
 	line-height: 1.2em;
 	margin-top: 75px;
 	margin-bottom: 225px;
+  margin-left: 100px;
 	text-align: left;
 	z-index: 50%;
 	overflow-y: scroll;
@@ -173,7 +183,7 @@ a:hover {
   color: #ff0039;
 }
 
-.italic {
+.roman {
   font-family: 'BWHaasText-Roman';
   font-size: 14px;
   text-align: center;
@@ -217,6 +227,18 @@ a:hover {
   padding-bottom: 25px;
   z-index: 1;
 }
+
+.messages {
+  width: auto;
+  height: 50%;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+
 
 .images img{
   width: 100%;
@@ -265,7 +287,10 @@ a:hover {
     margin-right: 30%;
     padding: 20px;
     overflow: scroll;
+    overflow: hidden; /* Hide scrollbars */
+
 }
+
 
 
 .abstract {

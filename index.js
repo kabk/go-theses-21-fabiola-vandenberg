@@ -1,21 +1,28 @@
-// Deze functie geeft een stukje code terug waar we zeggen wacht voor zoveel milliseconde
 function timeout(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// De functie om te "typen"
-// Voor de lengte van de tekst gaan we typen
 
 let elementsRunning = {};
 async function typeWriter(text, el) {
   if (!elementsRunning[el.id]) {
     elementsRunning[el.id] = true;
+    let inHtmlElement = false;
     for (let i = 0; i < text.length; i++) {
-      await timeout(150);
-      el.innerHTML = text.substring(0, i + 1)
+      if (text[i + 1] === "<") {
+        inHtmlElement = true;
+        continue;
+      } else if (text[i + 1] === ">") {
+        inHtmlElement = false;
+        continue;
+      }
+
+      if (!inHtmlElement) {
+        await timeout(120);
+        el.innerHTML = text.substring(0, i + 1)
+      }
     }
   };
-
 }
 
 function isInViewport (elem) {
@@ -40,13 +47,17 @@ function addTyperToScrollEvent(text, elementId) {
   }, false);
 }
 
-addTyperToScrollEvent("Love letters left on read <br><br> My 2 year relationship", "#Lovelettersleftonread")
+window.onload = function () {
+  typeWriter("Love letters left on read <br><br> My 2 year relationship",  document.querySelector("#Lovelettersleftonread"));
+}
+
 addTyperToScrollEvent("read 5:15 am", "#read")
 addTyperToScrollEvent("Abstract", "#abstract")
 addTyperToScrollEvent("Introduction", "#introduction")
-addTyperToScrollEvent("Chapter I<br>Waiting in line for the new iPhone", "#chapter1")
+addTyperToScrollEvent("Chapter I <br>Waiting in line for the new iPhone", "#chapter1")
 addTyperToScrollEvent("Chapter II<br>Good morning Siri", "#chapter2")
 addTyperToScrollEvent("Chapter III<br>Digital butterflies","#chapter3")
 addTyperToScrollEvent("Chapter IV<br>No, you hang up", "#chapter4")
 addTyperToScrollEvent("Conclusion<br>Broken heart emoji", "#conclusion")
 addTyperToScrollEvent("Bibliography", "#bibliography")
+addTyperToScrollEvent("delivered", "#delivered")
