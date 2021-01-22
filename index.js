@@ -4,11 +4,11 @@ function timeout(ms) {
 
 
 let elementsRunning = {};
-async function typeWriter(text, el) {
+async function typeWriter(text, el, offset = 0) {
   if (!elementsRunning[el.id]) {
     elementsRunning[el.id] = true;
     let inHtmlElement = false;
-    for (let i = 0; i < text.length; i++) {
+    for (let i = 0 + offset; i < text.length; i++) {
       if (text[i + 1] === "<") {
         inHtmlElement = true;
         continue;
@@ -47,8 +47,19 @@ function addTyperToScrollEvent(text, elementId) {
   }, false);
 }
 
-window.onload = function () {
-  typeWriter("Love letters left on read <br><br> My 2 year relationship",  document.querySelector("#Lovelettersleftonread"));
+
+window.onload = async function () {
+  const el = document.querySelector("#Lovelettersleftonread");
+  await typeWriter("Love ll", el);
+  elementsRunning[el.id] = false;
+  await timeout(900);
+  await typeWriter("Love letters left onnn", el, 6);
+  elementsRunning[el.id] = false;
+  await timeout(900);
+  await typeWriter("Love letters left on read <br><br> My 2 yee", el, 22);
+  elementsRunning[el.id] = false;
+  await timeout(900);
+  await typeWriter("Love letters left on read <br><br> My 2 year relationship", el, 43);
 }
 
 addTyperToScrollEvent("read 5:15 am", "#read")
