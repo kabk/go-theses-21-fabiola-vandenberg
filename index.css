@@ -33,7 +33,7 @@ body {
 /* TEXT */
 p {
   font-family: 'BWHaasText-Medium';
-  font-size: 14px;
+  font-size: 16px;
   /* text-align: left; */
   overflow-wrap: break-word;
     word-wrap: break-word;
@@ -189,7 +189,7 @@ a:hover {
 
 .subtitle {
   font-family: 'BWHaasText-Medium';
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   text-indent: 18px;
   color: #ff0039;
@@ -205,7 +205,7 @@ a:hover {
 
 .footnotes{
   font-family: 'BWHaasText-Roman';
-  font-size: 10px;
+  font-size: 8px;
   padding-top: 3px;
   padding-left: 0%;
   padding-right: 5%;
