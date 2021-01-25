@@ -33,7 +33,7 @@ body {
 /* TEXT */
 p {
   font-family: 'BWHaasText-Medium';
-  font-size: 16px;
+  font-size: 15px;
   /* text-align: left; */
   overflow-wrap: break-word;
     word-wrap: break-word;
@@ -191,7 +191,7 @@ a:hover {
 
 .subtitle {
   font-family: 'BWHaasText-Medium';
-  font-size: 16px;
+  font-size: 15px;
   text-transform: uppercase;
   text-indent: 18px;
   color: #ff0039;
