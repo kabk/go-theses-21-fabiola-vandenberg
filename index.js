@@ -18,7 +18,7 @@ async function typeWriter(text, el, offset = 0) {
       }
 
       if (!inHtmlElement) {
-        await timeout(120);
+        await timeout(150);
         el.innerHTML = text.substring(0, i + 1)
       }
     }
