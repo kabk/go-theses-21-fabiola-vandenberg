@@ -50,13 +50,13 @@ function addTyperToScrollEvent(text, elementId) {
 
 window.onload = async function () {
   const el = document.querySelector("#Lovelettersleftonread");
-  await typeWriter("Love ll", el);
+  await typeWriter("Loev", el);
   elementsRunning[el.id] = false;
   await timeout(900);
-  await typeWriter("Love letters left onnn", el, 6);
+  await typeWriter("Love letters lefft", el, 6);
   elementsRunning[el.id] = false;
   await timeout(900);
-  await typeWriter("Love letters left on read <br><br> My 2 yee", el, 22);
+  await typeWriter("Love letters left on read <br><br> My 2 year reel", el, 22);
   elementsRunning[el.id] = false;
   await timeout(900);
   await typeWriter("Love letters left on read <br><br> My 2 year relationship", el, 43);
