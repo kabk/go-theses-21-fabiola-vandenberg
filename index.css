@@ -108,6 +108,11 @@ a:hover {
   color: #ff0039;
 } */
 
+u {
+    text-decoration: underline;
+}
+
+
 .Title{
   font-family: 'BWHaasText-Medium';
   font-size: 50px;
