@@ -52,13 +52,13 @@ window.onload = async function () {
   const el = document.querySelector("#Lovelettersleftonread");
   await typeWriter("Loev", el);
   elementsRunning[el.id] = false;
-  await timeout(900);
-  await typeWriter("Love letters lefft", el, 6);
+  await timeout(800);
+  await typeWriter("Love letters lefft on", el, 6);
   elementsRunning[el.id] = false;
-  await timeout(900);
+  await timeout(800);
   await typeWriter("Love letters left on read <br><br> My 2 year reel", el, 22);
   elementsRunning[el.id] = false;
-  await timeout(900);
+  await timeout(800);
   await typeWriter("Love letters left on read <br><br> My 2 year relationship", el, 43);
 }
 
