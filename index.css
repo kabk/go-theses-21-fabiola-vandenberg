@@ -110,7 +110,8 @@ a:hover {
 
 .Title{
   font-family: 'BWHaasText-Medium';
-  font-size: 55px;
+  font-size: 50px;
+  line-height: 1.1em;
   text-align: left;
   color: #ff0039;
 }
@@ -133,7 +134,7 @@ a:hover {
 
 .endtext {
   font-family: 'BWHaasText-Medium';
-  font-size: 14px;
+  font-size: 11px;
   text-align: center;
   overflow-wrap: break-word;
     word-wrap: break-word;
@@ -147,7 +148,7 @@ a:hover {
 .read{
   font-family: 'BWHaasText-Medium';
   font-size: 20px;
-  padding-top: 50px;
+  padding-top: 70px;
   text-align: right;
   color: #ff0039;
 }
@@ -244,8 +245,8 @@ a:hover {
 .messages {
   width: auto;
   height: 50%;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
   margin-bottom: 20px;
   margin-top: 20px;
   z-index: 1;
